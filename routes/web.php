@@ -37,6 +37,7 @@ Route::middleware(['auth', 'user-role:partner'])->group(function () {
 });
 
 
+Route::get('/yaboy/haci', [HomeController::class, 'yaboy']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
